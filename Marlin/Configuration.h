@@ -52,7 +52,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 02010100
+#define CONFIGURATION_H_VERSION 02010200
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -978,7 +978,7 @@
 
 #if ENABLED(DELTA_AUTO_CALIBRATION)
 // set the default number of probe points : n*n (1 -> 7)
-#define DELTA_CALIBRATION_DEFAULT_POINTS 7
+#define DELTA_CALIBRATION_DEFAULT_POINTS 7.0
 #endif
 
 #if EITHER(DELTA_AUTO_CALIBRATION, DELTA_CALIBRATION_MENU)
