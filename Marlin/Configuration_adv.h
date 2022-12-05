@@ -874,11 +874,11 @@
 
 #define HOMING_BUMP_MM \
   {                    \
-    10, 10, 10         \
+    5, 5, 5            \
   } // (linear=mm, rotational=°) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR \
   {                         \
-    10, 10, 10              \
+    5, 5, 5                 \
   } // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
 #define HOMING_BACKOFF_POST_MM \
