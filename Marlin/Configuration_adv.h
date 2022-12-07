@@ -630,7 +630,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN 44 // turn off extruder fan when it's temperature is above 50°C
+#define E0_AUTO_FAN_PIN P2_04 // turn off extruder fan when it's temperature is above 50°C
 
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
@@ -874,7 +874,7 @@
 
 #define HOMING_BUMP_MM \
   {                    \
-    5, 5, 5            \
+    0, 0, 0            \
   } // (linear=mm, rotational=°) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR \
   {                         \
@@ -3244,14 +3244,14 @@
  * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
  * M913 X/Y/Z/E to live tune the setting
  */
-//#define HYBRID_THRESHOLD
+#define HYBRID_THRESHOLD
 
 #define X_HYBRID_THRESHOLD 100 // [mm/s]
 #define X2_HYBRID_THRESHOLD 100
 #define Y_HYBRID_THRESHOLD 100
 #define Y2_HYBRID_THRESHOLD 100
-#define Z_HYBRID_THRESHOLD 3
-#define Z2_HYBRID_THRESHOLD 3
+#define Z_HYBRID_THRESHOLD 100
+#define Z2_HYBRID_THRESHOLD 100
 #define Z3_HYBRID_THRESHOLD 3
 #define Z4_HYBRID_THRESHOLD 3
 #define I_HYBRID_THRESHOLD 3 // [linear=mm/s, rotational=°/s]
@@ -3295,16 +3295,16 @@
  * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
  * @section tmc/stallguard
  */
-//#define SENSORLESS_HOMING // StallGuard capable drivers only
+#define SENSORLESS_HOMING // StallGuard capable drivers only
 
 #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
 // TMC2209: 0...255. TMC2130: -64...63
-#define X_STALL_SENSITIVITY 8
+#define X_STALL_SENSITIVITY 200
 #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-#define Y_STALL_SENSITIVITY 8
+#define Y_STALL_SENSITIVITY 200
 #define Y2_STALL_SENSITIVITY Y_STALL_SENSITIVITY
-//#define Z_STALL_SENSITIVITY  8
-//#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
+#define Z_STALL_SENSITIVITY 200
+#define Z2_STALL_SENSITIVITY Z_STALL_SENSITIVITY
 //#define Z3_STALL_SENSITIVITY Z_STALL_SENSITIVITY
 //#define Z4_STALL_SENSITIVITY Z_STALL_SENSITIVITY
 //#define I_STALL_SENSITIVITY  8
@@ -3314,7 +3314,7 @@
 //#define V_STALL_SENSITIVITY  8
 //#define W_STALL_SENSITIVITY  8
 //#define SPI_ENDSTOPS              // TMC2130 only
-//#define IMPROVE_HOMING_RELIABILITY
+#define IMPROVE_HOMING_RELIABILITY
 #endif
 
 // @section tmc/config
@@ -3341,7 +3341,7 @@
  * Enable M122 debugging command for TMC stepper drivers.
  * M122 S0/1 will enable continuous reporting.
  */
-//#define TMC_DEBUG
+#define TMC_DEBUG
 
 /**
  * You can set your own advanced settings by filling in predefined functions.
