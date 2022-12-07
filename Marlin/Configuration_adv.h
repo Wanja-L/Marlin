@@ -874,7 +874,7 @@
 
 #define HOMING_BUMP_MM \
   {                    \
-    0, 0, 0            \
+    0, 0, 5            \
   } // (linear=mm, rotational=°) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR \
   {                         \
