@@ -874,7 +874,7 @@
 
 #define HOMING_BUMP_MM \
   {                    \
-    5, 5, 5            \
+    0, 0, 5            \
   } // (linear=mm, rotational=°) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR \
   {                         \
@@ -3295,7 +3295,7 @@
  * Comment *_STALL_SENSITIVITY to disable sensorless homing for that axis.
  * @section tmc/stallguard
  */
-#define SENSORLESS_HOMING // StallGuard capable drivers only
+// #define SENSORLESS_HOMING // StallGuard capable drivers only
 
 #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
 // TMC2209: 0...255. TMC2130: -64...63
