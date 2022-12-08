@@ -1417,7 +1417,7 @@
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
  */
-#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default
+// #define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default, P0_10 is already defined in SKR1.4 defaults
 
 /**
  * Probe Type
