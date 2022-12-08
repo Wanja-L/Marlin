@@ -28,6 +28,7 @@
  */
 // normal size or plus?
 #define ANYCUBIC_KOSSEL_PLUS
+#define DIAG_PINS_REMOVED
 
 // Anycubic Probe version 1 or 2 see README.md; 0 for no probe
 #define ANYCUBIC_PROBE_VERSION 2
