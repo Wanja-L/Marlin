@@ -706,9 +706,9 @@
     76.48, 76.48        \
   }
 #else
-#define DEFAULT_Kp 22.36
-#define DEFAULT_Ki 1.63
-#define DEFAULT_Kd 76.48
+#define DEFAULT_Kp 22.0
+#define DEFAULT_Ki 1.0
+#define DEFAULT_Kd 114.0
 #endif
 #endif
 
